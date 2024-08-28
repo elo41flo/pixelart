@@ -1,48 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
-    height: 100vh;
     justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-#palette {
-    margin-bottom: 20px;
-}
-
-#actions {
-    margin-bottom: 20px;
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    overflow: auto;  /* Ajouter les barres de défilement si nécessaire */
+    border: 1px solid black;
 }
 
 #pixelCanvas {
     display: grid;
-    grid-template-columns: repeat(16, 25px);  /* Créer une grille de 16 colonnes */
-    grid-template-rows: repeat(16, 25px);     /* Créer une grille de 16 lignes */
-    gap: 1px;                                 /* Espace entre les pixels */
-    border: 2px solid black;                  /* Bordure autour de la grille */
+    width: max-content;
+    height: max-content;
 }
 
 .pixel {
-    width: 25px;
-    height: 25px;
+    border: 1px solid #ddd;
     background-color: white;
-    border: 1px solid #ccc;                   /* Lignes de séparation entre les pixels */
-    cursor: pointer;
-    transition: background-color 0.2s;
 }
 
-.pixel:hover {
-    background-color: #e0e0e0;                /* Légère couleur au survol pour indication visuelle */
+#palette, #actions, #gridSizeSelector {
+    margin: 10px;
 }
