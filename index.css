@@ -34,3 +34,8 @@ body {
 #palette, #actions, #gridSizeSelector {
     margin: 10px;
 }
+
+button {
+    color: #ddd;
+    background-color: #511763;
+}
